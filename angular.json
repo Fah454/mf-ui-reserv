@@ -24,9 +24,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "./node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "./node_modules/font-awesome/css/font-awesome.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.js",
+              "./node_modules/jquery/dist/jquery.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -91,7 +97,10 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "../node_modules/jquery/dist/jquery.js"
+            ]
           }
         },
         "lint": {
@@ -120,6 +129,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MF-UI-reservation"
+    }
+  },
+  "defaultProject": "MF-UI-reservation",
+  "cli": {
+    "analytics": "fec6b11b-8884-43f0-b7b8-cf40af80b523"
+  }
 }

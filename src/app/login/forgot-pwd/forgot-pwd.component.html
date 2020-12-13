@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V16</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="/assets/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/assets/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="/assets/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+
+<!--===============================================================================================-->
+
+<!--===============================================================================================-->	
+
+<!--===============================================================================================-->
+	
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('/assets/images/bg-01.jpg');">
+			<div class="wrap-login100 p-t-30 p-b-50">
+				<span class="login100-form-title p-b-41">
+					réinitialiser votre mot de passe
+				</span>
+				<form class="login100-form validate-form p-b-33 p-t-5" (ngSubmit)="ResetPassword()">
+
+					<div class="form-group  wrap-input100 validate-input" data-validate = "Entrer email">
+                        <input class="input100  form-control" type="email" name="email" [(ngModel)]="email" placeholder="entrer votre adresse email" required>                       
+						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
+					</div>                  
+                   
+                    <br>                    
+                    <div class="form-group">                      
+                                <p *ngIf="this.error.message === 'The email address is badly formatted.' " class="text-danger">
+                                    vérifier l'adresse Email</p>  
+                                    <p *ngIf="this.error.message === 'There is no user record corresponding to this identifier. The user may have been deleted.' " class="text-danger">
+                                        Aucun enregistrement concernant cet utilisateur! Veuillez créer un compte </p>          
+                                        <p *ngIf="this.valider" class="text-success">
+                                            reinitilialisation  mot de passe avec succès!Veuillez vérifier votre boîte de réception e-mail et choisissez un nouveau mot de passe </p> 
+                    </div>  
+                    <div class="container-login100-form-btn m-t-32">
+						<button class="login100-form-btn">
+							réinitialiser
+						</button>
+                    </div>					
+                    <br>
+                    <a href="#" routerLink="/login"><p style="text-align:center;color: dodgerblue;">Revenir à l'écran de connexion</p></a>
+                    <br>
+                
+
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+
+	<script src="js/main.js"></script>
+
+</body>
+</html>

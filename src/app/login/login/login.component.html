@@ -1,0 +1,106 @@
+<!-- <div class="container">
+    <div class="row justify-content-center p-4">
+        
+        <div class="col-md-6">
+            <form (ngSubmit)="login()">
+            <h3>Firebase Login</h3>
+            <div class="form-group p-2">
+            <input type="email" name="email" class="form-control" [(ngModel)]="email" placeholder="Enter email Id" required>
+        </div>
+        <div class="form-group p-2">
+            <input type="password" name="password" class="form-control" [(ngModel)]="password" placeholder="Enter Password" required>
+        </div>
+        <div class="form-group p-2">
+            <button type="submit" class="btn btn-primary">Login</button>
+            <div class="register"><a href="#" routerLink="/register">New User Register</a></div>
+        </div>
+        </form>
+        <div class="form-group">
+            <p *ngIf="errorMessage.length > 0" class="text-danger">
+                {{errorMessage}}</p>        
+            <p *ngIf="error.message.length > 0" class="text-danger">
+                {{error.message}} </p>       
+           
+        </div>
+        </div>
+        
+    </div>
+</div> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V16</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="/assets/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/assets/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="/assets/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+
+<!--===============================================================================================-->
+
+<!--===============================================================================================-->	
+
+<!--===============================================================================================-->
+	
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('/assets/images/bg-01.jpg');">
+			<div class="wrap-login100 p-t-30 p-b-50">
+				<span class="login100-form-title p-b-41">
+					Connectez-vous à votre compte
+				</span>
+				<form class="login100-form validate-form p-b-33 p-t-5" (ngSubmit)="login()">
+
+					<div class="form-group  wrap-input100 validate-input" data-validate = "Entrer email">
+                        <input class="input100  form-control" type="email" name="email" [(ngModel)]="email" placeholder="entrer votre adresse email" required>                       
+						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
+					</div>                    
+                    <div class="form-group wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="password" name="password" [(ngModel)]="password" placeholder="entrer votre mot de passe" required>
+						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
+					</div>
+                    <br>                    
+                    <div class="form-group">
+                        <p *ngIf="this.error.message === 'The email address is badly formatted.' " class="text-danger">
+                            vérifier l'adresse Email</p>     
+                            <p *ngIf="this.error.message === 'The password is invalid or the user does not have a password.' " class="text-danger">
+                                Le mot de passe n'est pas valide</p>
+                                <p *ngIf="this.error.message === 'There is no user record corresponding to this identifier. The user may have been deleted.' " class="text-danger">
+                                    Aucun enregistrement concernant cet utilisateur! Veuillez créer un compte </p>
+                    </div>
+					<div class="container-login100-form-btn m-t-32">
+						<button class="login100-form-btn">
+							Enregistrer
+						</button>
+                    </div>
+                    <br>
+                    <a href="#" routerLink="/register"><p style="text-align:center;color: dodgerblue;">Créer nouveau compte</p></a>
+                    <br>
+                
+
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+
+	<script src="js/main.js"></script>
+
+</body>
+</html>
